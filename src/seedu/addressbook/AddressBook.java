@@ -134,6 +134,11 @@ public class AddressBook {
     private static final String COMMAND_EXIT_EXAMPLE = COMMAND_EXIT_WORD;
 
     private static final String DIVIDER = "===================================================";
+    private static final String COMMAND_INFORMATION = "Commands available: " + COMMAND_ADD_WORD + " " + COMMAND_CLEAR_WORD
+            + " " + COMMAND_DELETE_WORD + " " + COMMAND_EXIT_WORD + " " + COMMAND_FIND_WORD + " " + COMMAND_HELP_WORD
+            + " " + COMMAND_LIST_WORD;
+    private static final String COMMAND_INTRODUCTION = "'help' is recommended for first time users for more information " +
+            "of each command.";
 
 
     /* We use a String array to store details of a single person.
@@ -227,7 +232,7 @@ public class AddressBook {
      */
 
     private static void showWelcomeMessage() {
-        showToUser(DIVIDER, DIVIDER, VERSION, MESSAGE_WELCOME, DIVIDER);
+        showToUser(DIVIDER, DIVIDER, VERSION, MESSAGE_WELCOME, COMMAND_INFORMATION, COMMAND_INTRODUCTION , DIVIDER);
     }
 
     private static void showResultToUser(String result) {
